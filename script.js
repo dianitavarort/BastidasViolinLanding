@@ -12,7 +12,9 @@ const WA_MESSAGES = {
   boda:       'Hola Enmanuel 👋 Quiero cotizar violín en vivo para una boda 💒 ¿Me ayudas con disponibilidad y repertorio?',
   serenata:   'Hola Enmanuel 👋 Me encantaría cotizar una serenata con violín 🌹 ¿Cómo funciona?',
   fiesta:     'Hola Enmanuel 👋 Quiero violín en vivo para una fiesta privada 🎂 ¿Me cuentas las opciones?',
-  corporativo:'Hola Enmanuel 👋 Organizo un evento corporativo y queremos violín en vivo 🏢 ¿Me envías una propuesta?'
+  corporativo:'Hola Enmanuel 👋 Organizo un evento corporativo y queremos violín en vivo 🏢 ¿Me envías una propuesta?',
+  academia:   'Hola Enmanuel 👋 Quiero información sobre la Bastidas Violin Academia 🎻 (clases virtuales de violín). ¿Me cuentas niveles, horarios y precios?',
+  tiktok:     'Hola Enmanuel 👋 Te escribo desde tu página, te sigo en TikTok (@bastidasviolin) 🎵 ¡Sigue así!'
 };
 
 /* ---------- Enlaces de WhatsApp ---------- */

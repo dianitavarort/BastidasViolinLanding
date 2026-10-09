@@ -20,8 +20,8 @@
   --wa-green: #25d366;
 
   /* Tipografía */
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Sora", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Space Grotesk", system-ui, -apple-system, sans-serif;
 
   /* Ritmo */
   --radius: 20px;
@@ -973,3 +973,107 @@ body {
   .note-2 { top: 8%; right: -8%; font-size: 1.7rem; }
   .note-3 { bottom: -8%; left: -10%; font-size: 1.2rem; }
 }
+
+/* ============ Navegación multipágina ============ */
+.nav-link--active { color: var(--vino); opacity: 1; font-weight: 700; }
+.nav-link--active::after { transform: scaleX(1); }
+.site-header .main-nav .btn { flex: none; }
+
+/* Botón fantasma (para fondos oscuros) */
+.btn-ghost {
+  background: rgba(250, 246, 239, 0.08);
+  color: var(--crema);
+  border-color: rgba(250, 246, 239, 0.35);
+}
+.btn-ghost:hover {
+  background: rgba(250, 246, 239, 0.16);
+  border-color: var(--oro);
+  color: var(--oro-claro);
+  transform: translateY(-2px);
+}
+
+/* ============ Héroe de subpáginas (academia, tiktok) ============ */
+.page-hero {
+  padding: 9.5rem 0 4.5rem;
+  text-align: center;
+  color: var(--crema);
+  background:
+    radial-gradient(110% 130% at 50% 0%, rgba(214, 160, 44, 0.16), transparent 60%),
+    linear-gradient(160deg, var(--vino-deep) 0%, var(--vino-dark) 55%, #4a0e1c 100%);
+}
+.page-hero .section-title { color: var(--crema); }
+.page-hero .section-sub { color: var(--gris-claro); max-width: 640px; margin-inline: auto; }
+.page-hero .kicker { color: var(--oro-claro); justify-content: center; }
+.page-hero .kicker i { color: var(--oro-claro); }
+.page-hero .hero-cta { justify-content: center; }
+@media (max-width: 899px) {
+  .page-hero { padding: 7.5rem 0 3.5rem; }
+}
+
+/* ============ Biografía (página del artista) ============ */
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.bio-grid p { margin-bottom: 1.1rem; color: var(--gris); font-size: 1.02rem; }
+.bio-grid p:last-child { margin-bottom: 0; }
+.bio-grid strong { color: var(--vino); }
+.bio-grid a { color: var(--vino); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--oro); }
+.bio-grid a:hover { color: var(--oro); }
+.bio-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 6px solid var(--blanco);
+}
+.bio-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+@media (max-width: 899px) {
+  .bio-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* ============ Tarjetas "Explora" (página del artista) ============ */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+}
+.explore-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 2.2rem 1.8rem;
+  background: var(--blanco);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  text-decoration: none;
+  color: var(--texto);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.explore-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.explore-card > i { color: var(--oro); font-size: 1.7rem; }
+.explore-card h3 { font-family: var(--font-display); font-size: 1.35rem; color: var(--vino); }
+.explore-card p { color: var(--gris); font-size: 0.95rem; flex: 1; }
+.explore-card .go {
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--vino);
+}
+.explore-card .go i { margin-left: 0.3rem; font-size: 0.85em; transition: transform 0.25s ease; }
+.explore-card:hover .go i { transform: translateX(4px); }
+
+/* Nota informativa (academia) */
+.section-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 2.4rem;
+  text-align: center;
+  color: var(--gris);
+  font-size: 0.95rem;
+}
+.section-note i { color: var(--oro); }
